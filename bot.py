@@ -9,7 +9,12 @@ import asyncio
 
 logging.basicConfig(level=logging.INFO)
 
-BOT_TOKEN = "7355892035:AAGkwOEh1m5y3jmZlQ3ysYg6ZZ75Rbjpofo"
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+
 ADMIN_CHAT_ID = 992132564
 
 bot = Bot(token=BOT_TOKEN)
